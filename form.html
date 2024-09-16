@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Section Form with Gender</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        input[type="text"], input[type="number"], input[type="date"], input[type="password"] {
+            margin-bottom: 15px;
+            padding: 5px;
+            width: 200px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 15px;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Personal Information Form</h2>
+
+    <form action="/submit" method="POST">
+        <!-- Basic Info -->
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="firstname" placeholder="Enter First Name"><br>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lastname" placeholder="Enter Last Name"><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter Age"><br>
+
+        <!-- Gender Selection -->
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br><br>
+
+        <label for="joindate">Join Date:</label>
+        <input type="date" id="joindate" name="joindate"><br>
+
+        <label for="file">Choose file:</label>
+        <input type="file" id="file" name="file"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Login</h2>
+
+    <form action="/login" method="POST">
+        <!-- Login Section -->
+        <label for="loginName">Name:</label>
+        <input type="text" id="loginName" name="loginname" placeholder="Enter Login Name"><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter Password"><br>
+
+        <!-- Hobbies Section -->
+        <label>Hobbies:</label><br>
+        <input type="checkbox" id="games" name="hobbies" value="games">
+        <label for="games">Computer Games</label><br>
+
+        <input type="checkbox" id="cooking" name="hobbies" value="cooking">
+        <label for="cooking">Cooking</label><br>
+
+        <input type="checkbox" id="sports" name="hobbies" value="sports">
+        <label for="sports">Sports</label><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
